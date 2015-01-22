@@ -8,6 +8,7 @@ import java.util.Map;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 import WayofTime.alchemicalWizardry.api.event.RitualRunEvent;
@@ -298,6 +299,11 @@ public class Rituals
     }
 
     public String getRitualName()
+    {
+        return StatCollector.translateToLocal(this.name);
+    }
+    
+    public String getUnlocalizedRitualName()
     {
         return this.name;
     }
